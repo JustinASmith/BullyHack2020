@@ -72,13 +72,15 @@ function App() {
           </Form>
           </Modal.Body>
       </Modal>
+
+      {/* ROUTING for pages */}
       <Switch>
         {/* HomePage Route */}
         <Route exact path="/">
           <HomePage />
         </Route>
         <Route exact path="/live-qa">
-          <LiveQA />
+          <LiveQA />.
         </Route>
       </Switch>
     </Router>
