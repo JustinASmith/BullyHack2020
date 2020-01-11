@@ -20,7 +20,7 @@ function App() {
           <Button onClick={() => setLgShow(true)} variant="primary">Login / Register</Button>
         </Nav>
       </Navbar>
-
+this is an edit
       {/* MODAL: This is not shown unless lgShow ^^^ is set to true. */}
       <Modal
         size="lg"
