@@ -8,8 +8,8 @@ import {
 import { Nav, Navbar, Form, Row, Col, Button, Modal } from 'react-bootstrap'
 // HomePage
 import HomePage from './components/HomePage';
-import LiveQA from './components/LiveQA/LiveQA';
-
+import LiveClassroom from './components/LiveClassroom/LiveClassroom';
+import DiscussionBoard from './components/DiscussionBoard/DiscussionBoard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -22,8 +22,8 @@ function App() {
           <Navbar.Brand href="#home">BullyHack2020</Navbar.Brand>
           <Nav className="mr-auto">
           <Link className="nav-link" exact to='/'>Home</Link>
-          <Nav.Link href="#discussion">Discussion</Nav.Link>
-          <Link className="nav-link" to='/live-qa'>Live Classroom</Link>
+          <Link className="nav-link" to='/discussion-board'>Discussion Board</Link>
+          <Link className="nav-link" to='/live-classroom'>Live Classroom</Link>
           </Nav>
           <Nav className="ml-auto">
           <Button onClick={() => setLgShow(true)} variant="primary">Login / Register</Button>
@@ -79,8 +79,16 @@ function App() {
         <Route exact path="/">
           <HomePage />
         </Route>
+<<<<<<< HEAD
         <Route exact path="/live-qa">
           <LiveQA />.
+=======
+        <Route exact path="/live-classroom">
+          <LiveClassroom />
+        </Route>
+        <Route exact path="/discussion-board">
+          <DiscussionBoard />
+>>>>>>> 0cbd6473f884428e6494753325c7f3d98c972064
         </Route>
       </Switch>
     </Router>

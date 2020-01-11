@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class LiveQA extends Component {
+export default class LiveClassroom extends Component {
     render() {
         return (
             <>
-                <p>Live QA Page</p>
+                <p>Live Classroom Page</p>
             </>
         )
     }
