@@ -1,5 +1,5 @@
 import React, { Component} from 'react'
-import { Tab,Tabs,InputGroup,FormControl,Dropdown,DropdownButton,Form,ListGroup} from 'react-bootstrap';
+import { Tab,Tabs,InputGroup,FormControl,Dropdown,DropdownButton,Form,ListGroup, ButtonToolbar,Button} from 'react-bootstrap';
 
 function alertClicked() {
   alert('You clicked Top');
@@ -9,6 +9,9 @@ function alertClicked2() {
 }
 function alertClicked3() {
   alert('You clicked By Class');
+}
+function alertClicked4() {
+  alert('You clicked Submit');
 }
 //DUMMY data for taking in posts 
 const array1 = [1, 4, 9,4,7,12, 16];
@@ -58,8 +61,20 @@ export default class LiveClassroom extends Component {
 
   </Tab>
   <Tab eventKey="profile" title="Add">
-      
-
+    <div>
+    <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Title</Form.Label>
+    <Form.Control type="text" placeholder="Title..." />
+  </Form.Group>
+    <Form><Form.Group controlId="exampleForm.ControlTextarea1">
+    <Form.Label>Body</Form.Label>
+    <Form.Control as="textarea" rows="3"  placeholder="Please Enter here" />
+  </Form.Group>
+  <ButtonToolbar>
+  <center>  <Button onClick={alertClicked4} >Submit</Button></center> 
+  </ButtonToolbar>
+  </Form>
+  </div>
   </Tab>
  
 </Tabs>
