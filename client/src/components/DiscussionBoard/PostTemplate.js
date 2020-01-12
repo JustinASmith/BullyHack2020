@@ -1,50 +1,30 @@
 import Modal from 'react-bootstrap/Modal'
 import React from 'react'
 import Form from 'react-bootstrap/Form'
-import {Row, Col, Container, Button} from 'react-bootstrap'
-
+import {Row, Col, Container, Button,FormControl} from 'react-bootstrap'
+function clicking(){
+  return this.myInput.value
+} 
 function PostTemplate(props) {
     return (
-      <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Using Grid in Modal
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Container>
-            <Row className="show-grid">
-              <Col xs={12} md={8}>
-                <code>.col-xs-12 .col-md-8</code>
-              </Col>
-              <Col xs={6} md={4}>
-                <code>.col-xs-6 .col-md-4</code>
-              </Col>
-            </Row>
+    <div> <Container><div><h1>[CSE 1284] How do I do a for loop?</h1></div>
+    <div><p>Hey guys how do I do a for loop in python? I can not figure it out.</p></div></Container> 
+  <Container>  <Form><Form.Group controlId="exampleForm.ControlTextarea1">
+    <Form.Label>Comment</Form.Label>
+    <Form.Control as="textarea" rows="3"  placeholder="Please Enter here" />
+  </Form.Group>
+  </Form>
+ <center>  <Button onClick={<FormControl inputRef={ref => { this.myInput = ref; }} />
+} >Submit</Button></center>
+  <div><h2>Comments</h2></div>
+
+
+  </Container>
   
-            <Row className="show-grid">
-              <Col xs={6} md={4}>
-                <code>.col-xs-6 .col-md-4</code>
-              </Col>
-              <Col xs={6} md={4}>
-                <code>.col-xs-6 .col-md-4</code>
-              </Col>
-              <Col xs={6} md={4}>
-                <form>
-                    <Form.Group controlId="exampleForm.ControlTextarea1">
-                        <Form.Label>Example textarea</Form.Label>
-                        <Form.Control as="textarea" rows="3" />
-                    </Form.Group>
-                </form>
-              </Col>
-            </Row>
-          </Container>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer>
-      </Modal>
-    );
+  </div>
+    
+    
+      );
   }
   
 export default PostTemplate
