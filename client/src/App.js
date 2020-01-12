@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { Nav, Navbar, Form, Row, Col, Button, Modal } from 'react-bootstrap'
 // HomePage
+import axios from "axios";
 import HomePage from './components/HomePage';
 import LiveClassroom from './components/LiveClassroom/LiveClassroom';
 import DiscussionBoard from './components/DiscussionBoard/DiscussionBoard';
@@ -16,7 +17,26 @@ import './App.css';
 
 function App() {
   const [lgShow, setLgShow] = React.useState(false);
+  const [email, setEmail] = React.useState("")
+  const [password, setPassword] = React.useState("")
 
+  function postSubmit () {
+    
+    const user = {
+        email: email,
+        password: password
+    }
+    console.log(user);
+
+    axios.post('http://localhost:5000/users/add', user)
+        .then(res => console.log(res.data))
+        .catch((err) => {
+            console.log(err);
+        });
+    
+    setEmail("");
+    setPassword("");
+  }
   return (
     <Router>
       <Navbar bg="dark" variant="dark">
@@ -50,7 +70,11 @@ function App() {
               Email
               </Form.Label>
               <Col sm="10">
-              <Form.Control type="text" placeholder="email@example.com" />
+              <Form.Control type="text" 
+              required 
+              placeholder="email@example.com"
+              value={email}
+              onChange={(e)=> setEmail(e.target.value)} />
               </Col>
           </Form.Group>
 
@@ -59,7 +83,11 @@ function App() {
               Password
               </Form.Label>
               <Col sm="10">
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control type="password" 
+              required
+              placeholder="Password"
+              value={password}
+              onChange={(e)=> setPassword(e.target.value)} />
               </Col>
           </Form.Group>
 
@@ -67,7 +95,9 @@ function App() {
           <Form.Group as={Row} controlId="formLoginButton">
               <Col className="ml-auto" sm="10">
               <Button variant="primary">Login</Button>
-              <Button className="justify-content-end" variant="light">Register</Button>
+              <Button className="justify-content-end" 
+              onClick={()=> postSubmit()}
+              variant="light">Register</Button>
               </Col>
           </Form.Group>
           </Form>
