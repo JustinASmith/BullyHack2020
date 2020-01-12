@@ -10,13 +10,13 @@ function LiveClassroom() {
   const [time, setTime] = React.useState('10:00');
 
   return (
-    <Container>
+    <Container fluid>
     <Row>
         <h1 className = "mx-auto">
             Live Classroom
         </h1>
     </Row>
-    <Row>
+    <Row className="mb-2">
         <Col sm> 
          </Col>
          <Col sm> 
@@ -89,9 +89,9 @@ function LiveClassroom() {
             </Modal>
         </Col>
     </Row>
-    <Row>
+    <Row className="mb-2">
         <Col sm> 
-        <Card style={{ width: '15rem' }}>
+        <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqpREPkxnys0Llkiiak8gDjQtGu-MGHbBx-WSS5zx_ZTHO1x9bEw&s" />
             <Card.Body>
                 <Card.Title>Introduction to CSE</Card.Title>
@@ -99,8 +99,33 @@ function LiveClassroom() {
             </Card.Body>
             </Card>
         </Col>
-        <Col sm> <p> Live Classroom Page </p> </Col>
-        <Col sm> Live Classroom Page </Col>
+        <Col sm> 
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqpREPkxnys0Llkiiak8gDjQtGu-MGHbBx-WSS5zx_ZTHO1x9bEw&s" />
+            <Card.Body>
+                <Card.Title>Discrete Structures</Card.Title>
+                <Button variant="success">Join Class</Button>
+            </Card.Body>
+            </Card>
+        </Col>
+        <Col sm> 
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqpREPkxnys0Llkiiak8gDjQtGu-MGHbBx-WSS5zx_ZTHO1x9bEw&s" />
+            <Card.Body>
+                <Card.Title>Data Structures</Card.Title>
+                <Button variant="success">Join Class</Button>
+            </Card.Body>
+            </Card>
+        </Col>
+        <Col sm> 
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqpREPkxnys0Llkiiak8gDjQtGu-MGHbBx-WSS5zx_ZTHO1x9bEw&s" />
+            <Card.Body>
+                <Card.Title>Formal Languages</Card.Title>
+                <Button variant="success">Join Class</Button>
+            </Card.Body>
+            </Card>
+        </Col>
     </Row>
     </Container>
   );
