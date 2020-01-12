@@ -1,8 +1,8 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import butlerhall from'../Assets/img/butlerHall.jpg'
-import discussBoard from'../Assets/img/discussBoard.jpg'
-import liveChat from'../Assets/img/liveChat.jpg'
+import discussBoard from'../Assets/img/discussBoardAvi.jpg'
+import liveChat from'../Assets/img/liveChatAvi.jpg'
 import "./HomePage.css"
 
 
@@ -21,7 +21,7 @@ export default function HomePage() {
                 alt="First slide"
                 />
                 <Carousel.Caption>
-                <h3>Bulldog classroom</h3>
+                <h3></h3>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -30,9 +30,8 @@ export default function HomePage() {
                 src={butlerhall}
                 alt="Second slide"
                 />
-
                 <Carousel.Caption>
-                <h3>Discussion Boards</h3>
+                <h3></h3>
                 </Carousel.Caption>
             </Carousel.Item>
             
