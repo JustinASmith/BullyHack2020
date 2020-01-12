@@ -14,7 +14,7 @@ function alertClicked4() {
   alert('You clicked Submit');
 }
 //DUMMY data for taking in posts 
-const array1 = [1, 4, 9,4,7,12, 16];
+const array1 = ["[CSE 1284] How do I do a for loop?", "[CSE 1384] How to do link list?", "[CSE 2383] Merge sort vs Quick sort?","[CSE 2813] N={0,1,2,...} → ∀x:∃y:y=x+ 1 ?????","[CSE 4153] What's a socket?", "[CSE 3324] CSS help.."];
 function iterate_list(){
   let total = array1.map(function(num){
     return (<ListGroup.Item action onClick={alertClicked}>
@@ -39,7 +39,7 @@ export default class LiveClassroom extends Component {
       <center><h1>Discussion Board</h1></center>
       <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
   <Tab eventKey="home" title="Search">
-  <InputGroup className="mb-3">
+    <Container>  <InputGroup className="mb-3">
     <DropdownButton
       as={InputGroup.Prepend}
       variant="outline-secondary"
@@ -52,11 +52,13 @@ export default class LiveClassroom extends Component {
     </DropdownButton>
     <FormControl aria-describedby="basic-addon1" />
   </InputGroup>
-  <div>
+</Container>
+<Container>
   <ListGroup defaultActiveKey="#link1">
   {iterate_list()}
   </ListGroup>,
-  </div>
+</Container>
+
 
 
   </Tab>
