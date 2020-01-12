@@ -72,6 +72,8 @@ function App() {
           </Form>
           </Modal.Body>
       </Modal>
+
+      {/* ROUTING for pages */}
       <Switch>
         {/* HomePage Route */}
         <Route exact path="/">
