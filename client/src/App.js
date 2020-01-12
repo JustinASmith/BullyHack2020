@@ -79,16 +79,11 @@ function App() {
         <Route exact path="/">
           <HomePage />
         </Route>
-<<<<<<< HEAD
-        <Route exact path="/live-qa">
-          <LiveQA />.
-=======
         <Route exact path="/live-classroom">
           <LiveClassroom />
         </Route>
         <Route exact path="/discussion-board">
           <DiscussionBoard />
->>>>>>> 0cbd6473f884428e6494753325c7f3d98c972064
         </Route>
       </Switch>
     </Router>
