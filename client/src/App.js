@@ -41,7 +41,7 @@ function App() {
   return (
     <Router>
       <Navbar bg="dark" variant="dark">
-          <Link className="navbar-brand" exact to='/'>BullyHack2020</Link>
+          <Link className="navbar-brand" exact to='/'>BeLively</Link>
           <Nav className="mr-auto">
           <Link className="nav-link" exact to='/'>Home</Link>
           <Link className="nav-link" to='/discussion-board'>Discussion Board</Link>
