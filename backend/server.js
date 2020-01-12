@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const classroomSocket = require('./socket/classroom');
 
 require('dotenv').config();
 
@@ -25,4 +26,5 @@ app.use('/qa', qaLiveRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
+    classroomSocket();
 });
