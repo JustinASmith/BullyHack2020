@@ -10,6 +10,7 @@ import { Nav, Navbar, Form, Row, Col, Button, Modal } from 'react-bootstrap'
 import HomePage from './components/HomePage';
 import LiveClassroom from './components/LiveClassroom/LiveClassroom';
 import DiscussionBoard from './components/DiscussionBoard/DiscussionBoard';
+import LiveClassroomChat from './components/LiveClassroom/LiveClassroomChat';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -81,6 +82,9 @@ function App() {
         </Route>
         <Route exact path="/live-classroom">
           <LiveClassroom />
+        </Route>
+        <Route exact path="/live-classroom-chat">
+          <LiveClassroomChat />
         </Route>
         <Route exact path="/discussion-board">
           <DiscussionBoard />

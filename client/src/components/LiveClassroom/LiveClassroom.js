@@ -1,14 +1,18 @@
 import React from 'react';
 import TimePicker from 'react-time-picker';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import classPicture from'../../Assets/img/class.png'
 import { Form, Row, Col, Button, Modal, Container, Card } from 'react-bootstrap'
-
+import { Link } from 'react-router-dom';
 
 
 function LiveClassroom() {
   const [lgShow, setLgShow] = React.useState(false);
   const [time, setTime] = React.useState('10:00');
+  const [show, setShow] = React.useState(false);
+  const [code, setCode] = React.useState(null);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <Container>
@@ -96,7 +100,7 @@ function LiveClassroom() {
             <Card.Img variant="top" src={classPicture} />
             <Card.Body>
                 <Card.Title>Introduction to CSE</Card.Title>
-                <Button variant="success">Join Class</Button>
+                <Button onClick={handleShow} variant="success">Join Class</Button>
             </Card.Body>
             </Card>
         </Col>
@@ -105,7 +109,7 @@ function LiveClassroom() {
             <Card.Img variant="top" src={classPicture} />
             <Card.Body>
                 <Card.Title>Discrete Structures</Card.Title>
-                <Button variant="success">Join Class</Button>
+                <Button onClick={handleShow} variant="success">Join Class</Button>
             </Card.Body>
             </Card>
         </Col>
@@ -123,10 +127,34 @@ function LiveClassroom() {
             <Card.Img variant="top" src={classPicture} />
             <Card.Body>
                 <Card.Title>Formal Languages</Card.Title>
-                <Button variant="success">Join Class</Button>
+                <Button onClick={handleShow} variant="success">Join Class</Button>
             </Card.Body>
             </Card>
         </Col>
+
+        <Modal size="lg" show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+            <Modal.Title>Enter Class Code</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <Form.Group as={Row} controlId="formPlaintextClassName">
+                    <Form.Label column sm="2">
+                        Class Code
+                    </Form.Label>
+                    <Col sm="10">
+                    <Form.Control type="text" placeholder="e.g. 1234" />
+                    </Col>
+                </Form.Group>
+            </Modal.Body>
+            <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+                Close
+            </Button>
+            <Button variant="primary" onClick={handleClose}>
+                Join
+            </Button>
+            </Modal.Footer>
+        </Modal>
     </Row>
     </Container>
   );
