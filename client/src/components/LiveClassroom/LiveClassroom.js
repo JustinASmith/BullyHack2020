@@ -1,6 +1,7 @@
 import React from 'react';
 import TimePicker from 'react-time-picker';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import classPicture from'../../Assets/img/class.png'
 import { Form, Row, Col, Button, Modal, Container, Card } from 'react-bootstrap'
 
 
@@ -92,7 +93,7 @@ function LiveClassroom() {
     <Row className="mb-2">
         <Col sm> 
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqpREPkxnys0Llkiiak8gDjQtGu-MGHbBx-WSS5zx_ZTHO1x9bEw&s" />
+            <Card.Img variant="top" src={classPicture} />
             <Card.Body>
                 <Card.Title>Introduction to CSE</Card.Title>
                 <Button variant="success">Join Class</Button>
@@ -101,7 +102,7 @@ function LiveClassroom() {
         </Col>
         <Col sm> 
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqpREPkxnys0Llkiiak8gDjQtGu-MGHbBx-WSS5zx_ZTHO1x9bEw&s" />
+            <Card.Img variant="top" src={classPicture} />
             <Card.Body>
                 <Card.Title>Discrete Structures</Card.Title>
                 <Button variant="success">Join Class</Button>
@@ -110,7 +111,7 @@ function LiveClassroom() {
         </Col>
         <Col sm> 
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqpREPkxnys0Llkiiak8gDjQtGu-MGHbBx-WSS5zx_ZTHO1x9bEw&s" />
+            <Card.Img variant="top" src={classPicture} />
             <Card.Body>
                 <Card.Title>Data Structures</Card.Title>
                 <Button variant="success">Join Class</Button>
@@ -119,7 +120,7 @@ function LiveClassroom() {
         </Col>
         <Col sm> 
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqpREPkxnys0Llkiiak8gDjQtGu-MGHbBx-WSS5zx_ZTHO1x9bEw&s" />
+            <Card.Img variant="top" src={classPicture} />
             <Card.Body>
                 <Card.Title>Formal Languages</Card.Title>
                 <Button variant="success">Join Class</Button>
