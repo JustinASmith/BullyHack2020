@@ -64,7 +64,7 @@ export default function HomePage() {
                         Live Classroom Chat
                     </h1>
                 </div>
-                <p style={{ textAlign: "center" }}>Our live classroom chat allows students to ask questions, while anonymously to other students, to teachers live during class. </p>
+                <p style={{ textAlign: "center" }}>Our live classroom chat allows students to ask questions, while anonymous to other students, to teachers live during class. </p>
             </div>
         </div>
     </div>
