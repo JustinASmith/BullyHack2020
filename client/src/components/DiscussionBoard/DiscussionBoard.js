@@ -1,5 +1,5 @@
 import React, { Component} from 'react'
-import { Tab,Tabs,InputGroup,FormControl,Dropdown,DropdownButton,Form,ListGroup, ButtonToolbar,Button} from 'react-bootstrap';
+import { Tab,Tabs,InputGroup,FormControl,Dropdown,DropdownButton,Form,ListGroup, ButtonToolbar,Button, Container} from 'react-bootstrap';
 
 function alertClicked() {
   alert('You clicked Top');
@@ -62,6 +62,7 @@ export default class LiveClassroom extends Component {
   </Tab>
   <Tab eventKey="profile" title="Add">
     <div>
+    <Container>
     <Form.Group controlId="exampleForm.ControlInput1">
     <Form.Label>Title</Form.Label>
     <Form.Control type="text" placeholder="Title..." />
@@ -74,6 +75,8 @@ export default class LiveClassroom extends Component {
   <center>  <Button onClick={alertClicked4} >Submit</Button></center> 
   </ButtonToolbar>
   </Form>
+    </Container>
+  
   </div>
   </Tab>
  
