@@ -8,6 +8,10 @@ const classroomSocket = () => {
         socket.on('disconnect', () => {
             console.log('user disconnected');
         });
+
+        socket.on('connectToClass', (room) => {
+            
+        });
     });
 
     http.listen(3001, function() {
