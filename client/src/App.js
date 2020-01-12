@@ -11,6 +11,7 @@ import HomePage from './components/HomePage';
 import LiveClassroom from './components/LiveClassroom/LiveClassroom';
 import DiscussionBoard from './components/DiscussionBoard/DiscussionBoard';
 import LiveClassroomChat from './components/LiveClassroom/LiveClassroomChat';
+import PostTemplate from './components/DiscussionBoard/PostTemplate'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -88,6 +89,9 @@ function App() {
         </Route>
         <Route exact path="/discussion-board">
           <DiscussionBoard />
+        </Route>
+        <Route exact path="/post-template">
+          <PostTemplate />
         </Route>
       </Switch>
     </Router>

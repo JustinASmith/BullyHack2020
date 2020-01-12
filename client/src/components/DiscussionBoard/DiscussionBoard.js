@@ -1,5 +1,6 @@
 import React, { Component} from 'react'
 import { Tab,Tabs,InputGroup,FormControl,Dropdown,DropdownButton,Form,ListGroup, ButtonToolbar,Button, Container} from 'react-bootstrap';
+import {Link} from 'react-router-dom'
 
 function alertClicked() {
   alert('You clicked Top');
@@ -13,18 +14,19 @@ function alertClicked3() {
 function alertClicked4() {
   alert('You clicked Submit');
 }
+function postClick() {
+  
+}
 //DUMMY data for taking in posts 
 const array1 = [1, 4, 9,4,7,12, 16];
 function iterate_list(){
   let total = array1.map(function(num){
-    return (<ListGroup.Item action onClick={alertClicked}>
-      {num}
-    </ListGroup.Item>)
+    return (<Link className="list-group-item list-group-item-action" exact to='/post-template'>{num}</Link>)
   })
   return total;
 }
 
-
+{/* <Link className="list-group-item list-group-item-action" exact to='/'>Home</Link> */}
 
 export default class LiveClassroom extends Component {
 
