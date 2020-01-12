@@ -13,7 +13,7 @@ const qaLiveSchema = new Schema({
         unique: true
     },
     persistence: {
-        type: Date,
+        type: String,
         required: true
     },
     logToParent: {
