@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Form, Row, Col, Button, Modal, Container, Card } from 'react-bootstrap'
 
-export default function LiveClassroomChat() {
+export default function LiveClassroomChat(props) {
     return (
         <Container>
             <Row>

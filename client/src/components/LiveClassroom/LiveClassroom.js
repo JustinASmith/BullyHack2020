@@ -14,6 +14,11 @@ function LiveClassroom() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const handleClassCode = (e) => {
+      setCode(e.target.value);
+      console.log(code)
+  }
+
   return (
     <Container>
     <Row>
@@ -142,7 +147,7 @@ function LiveClassroom() {
                         Class Code
                     </Form.Label>
                     <Col sm="10">
-                    <Form.Control type="text" placeholder="e.g. 1234" />
+                    <Form.Control onChange={handleClassCode} type="text" placeholder="e.g. 1234" />
                     </Col>
                 </Form.Group>
             </Modal.Body>
@@ -150,9 +155,7 @@ function LiveClassroom() {
             <Button variant="secondary" onClick={handleClose}>
                 Close
             </Button>
-            <Button variant="primary" onClick={handleClose}>
-                Join
-            </Button>
+            <Link className="btn btn-primary" to="/live-classroom-chat" params={{ classCode: code}} >Join</Link>
             </Modal.Footer>
         </Modal>
     </Row>
