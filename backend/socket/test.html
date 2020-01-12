@@ -13,7 +13,11 @@
     <script>
         $(function () {
             var socket = io('http://localhost:3001');
-            console.log(socket)
+            socket.emit('connectToClass', 12345);
+            socket.emit('chat message', 'Hello!');
+            socket.on('chat message', function(msg){
+                console.log(msg)
+            })
         });
     </script>
 </body>

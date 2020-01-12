@@ -10,7 +10,10 @@ const classroomSocket = () => {
         });
 
         socket.on('connectToClass', (room) => {
-            
+            socket.join(room);
+            socket.on('chat message', (msg) => {
+                io.to(room).emit('chat message', msg);
+            });
         });
     });
 
