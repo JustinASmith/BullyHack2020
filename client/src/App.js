@@ -19,7 +19,7 @@ function App() {
   return (
     <Router>
       <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="#home">BullyHack2020</Navbar.Brand>
+          <Link className="navbar-brand" exact to='/'>BullyHack2020</Link>
           <Nav className="mr-auto">
           <Link className="nav-link" exact to='/'>Home</Link>
           <Link className="nav-link" to='/discussion-board'>Discussion Board</Link>
