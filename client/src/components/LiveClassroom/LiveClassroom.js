@@ -11,7 +11,7 @@ function LiveClassroom() {
   const [time, setTime] = React.useState('10:00');
 
   return (
-    <Container fluid>
+    <Container>
     <Row>
         <h1 className = "mx-auto">
             Live Classroom
@@ -90,9 +90,9 @@ function LiveClassroom() {
             </Modal>
         </Col>
     </Row>
-    <Row className="mb-2">
+    <Row>
         <Col sm> 
-        <Card style={{ width: '18rem' }}>
+        <Card className="mb-2" style={{ width: '18rem' }}>
             <Card.Img variant="top" src={classPicture} />
             <Card.Body>
                 <Card.Title>Introduction to CSE</Card.Title>
@@ -101,7 +101,7 @@ function LiveClassroom() {
             </Card>
         </Col>
         <Col sm> 
-        <Card style={{ width: '18rem' }}>
+        <Card className="mb-2" style={{ width: '18rem' }}>
             <Card.Img variant="top" src={classPicture} />
             <Card.Body>
                 <Card.Title>Discrete Structures</Card.Title>
@@ -110,7 +110,7 @@ function LiveClassroom() {
             </Card>
         </Col>
         <Col sm> 
-        <Card style={{ width: '18rem' }}>
+        <Card className="mb-2" style={{ width: '18rem' }}>
             <Card.Img variant="top" src={classPicture} />
             <Card.Body>
                 <Card.Title>Data Structures</Card.Title>
@@ -119,7 +119,7 @@ function LiveClassroom() {
             </Card>
         </Col>
         <Col sm> 
-        <Card style={{ width: '18rem' }}>
+        <Card className="mb-2" style={{ width: '18rem' }}>
             <Card.Img variant="top" src={classPicture} />
             <Card.Body>
                 <Card.Title>Formal Languages</Card.Title>
