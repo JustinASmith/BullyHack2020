@@ -18,8 +18,10 @@ connection.once('open', () => {
 });
 
 const usersRouter = require('./routes/users');
+const qaLiveRouter = require('./routes/qalive');
 
 app.use('/users', usersRouter);
+app.use('/qa', qaLiveRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
