@@ -1,11 +1,22 @@
 .HomeCarousel{
-    padding-top: 50px;
-    padding-right: 20px;
+    padding-top: 0px;
     padding-bottom: 80px;
-    padding-left: 20px;
 }
 
 .imgSettings{
-height:800px;
-width:600px;
+    height:800px;
+    width:600px;
+}
+
+.container{
+    padding-bottom: 20px;
+}
+
+.imgContainer{
+    text-align: center;
+    display: block;
+}
+
+.cardPadding{
+    padding-top: 10px;
 }
