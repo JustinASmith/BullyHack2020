@@ -17,25 +17,25 @@ router.route('/:code').get((req, res) => {
 });
 
 router.route('/add').post((req, res) => {
-    const { title, code, persistence, logToStudent } = req.body;
+    const { title, code, persistence, logToParent } = req.body;
 
-    const newQaLive = new QaLive({ title, code, persistence, logToStudent });
+    const newQaLive = new QaLive({ title, code, persistence, logToParent });
 
     newQaLive.save()
         .then(() => res.json('QA added!'))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/update/:id').post(async (req, res) => {
-    const id = req.params.id;
-    const { title, code, persistence, logToStudent } = req.body;
+router.route('/update/:code').post(async (req, res) => {
+    const reqCode = req.params.code;
+    const { title, code, persistence, logToParent } = req.body;
 
-    QaLive.findById(id)
+    QaLive.findById(reqCode)
         .then(qa => {
             qa.title = title;
             qa.code = code;
             qa.persistence = persistence;
-            qa.logToStudent = logToStudent;
+            qa.logToParent = logToParent;
 
             qa.save()
                 .then(() => res.json('QA Live updated!'))
@@ -44,10 +44,10 @@ router.route('/update/:id').post(async (req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/:id').delete((req, res) => {
-    QaLive.findByIdAndDelete(req.params.id)
-        .then(() => res.json('QA Live deleted.'))
-        .catch(err => res.status(400).json('Error: ' + err));
+router.route('/:code').delete(async (req, res) => {
+    const result = await QaLive.findOneAndDelete(req.body.code);
+
+    res.json(result);
 });
 
 module.exports = router;

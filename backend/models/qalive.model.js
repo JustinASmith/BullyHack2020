@@ -16,7 +16,7 @@ const qaLiveSchema = new Schema({
         type: Date,
         required: true
     },
-    logToStudent: {
+    logToParent: {
         type: Boolean,
         required: true
     }
